@@ -6,10 +6,10 @@ $dbhost=DBHOST;
 $dbuser=DBUSER;
 $dbpass=DBPASS;
 $dbname=DBNAME;
-$setup_sucess = ''
-$notification_connect = ''
-$notification_create = ''
-$gohack = ''
+$setup_sucess = '';
+$notification_connect = '';
+$notification_create = '';
+$gohack = '';
 
 if(isset($_POST['submit'])){
     if(!@mysqli_connect($dbhost, $dbuser, $dbpass)){

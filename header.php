@@ -68,761 +68,334 @@ if (!isset($ACTIVE)){
 
 </head>
 
-<body class="no-skin">
-<div id="navbar" class="navbar navbar-default          ace-save-state">
-    <div class="navbar-container ace-save-state" id="navbar-container">
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">GoHackphp</a>
+    </div>
 
-        <div class="navbar-header in-mid">
-            <a href="<?php echo $GHP_ROOT_DIR;?>index.php" class="navbar-brand">
-                <small>
-                    <i class="fa fa-key"></i>
-                    goHACKPHP
-                </small>
-            </a>
-        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        <div class="navbar-buttons navbar-header pull-right" role="navigation">
-            <ul class="nav nav-tabs"> </ul>
-        </div>
-    </div><!-- /.navbar-container -->
-</div>
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">XSS<span class="caret"></span></a>
+          <ul class="dropdown-menu">
 
-<div class="main-container ace-save-state" id="main-container">
-    <script type="text/javascript">
-        try{ace.settings.loadState('main-container')}catch(e){}
-    </script>
-
-
-    <div id="sidebar" class="sidebar                  responsive                    ace-save-state">
-        <script type="text/javascript">
-            try{ace.settings.loadState('sidebar')}catch(e){}
-        </script>
-
-        <ul class="nav nav-list">
-            <li class="<?php echo $ACTIVE[0];?>">
-                <a href="<?php echo $GHP_ROOT_DIR;?>index.php">
-                    <i class="ace-icon glyphicon glyphicon-tags"></i>
-                    <span class="menu-text"> 系统介绍 </span>
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="<?php echo $ACTIVE[1];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-lock"></i>
-                    <span class="menu-text">
-								暴力破解
-							</span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="<?php echo $ACTIVE[2];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/burteforce.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="<?php echo $ACTIVE[3];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/bf_form.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            基于表单的暴力破解
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[4];?>">
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/bf_server.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            验证码绕过(on server)
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[5];?>">
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/bf_client.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            验证码绕过(on client)
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[6];?>">
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/bf_token.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            token防爆破?
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-
-<!--                    <li class="--><?php //echo $ACTIVE[7];?><!--">-->
-<!--                        <a href="#" class="dropdown-toggle">-->
-<!--                            <i class="menu-icon fa fa-caret-right"></i>-->
-<!---->
-<!--                            test-->
-<!--                            <b class="arrow fa fa-angle-down"></b>-->
-<!--                        </a>-->
-<!---->
-<!--                        <b class="arrow"></b>-->
-<!---->
-<!--                        <ul class="submenu">-->
-<!--                            <li class="--><?php //echo $ACTIVE[7];?><!--">-->
-<!--                                <a href="top-menu.html">-->
-<!--                                    <i class="menu-icon fa fa-caret-right"></i>-->
-<!--                                    test sun 01-->
-<!--                                </a>-->
-<!---->
-<!--                                <b class="arrow"></b>-->
-<!--                            </li>-->
-<!---->
-<!--                        </ul>-->
-<!--                    </li>-->
-
-
-
-
-                </ul>
-            </li>
-
-
-            <li class="<?php echo $ACTIVE[7];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-indent-left"></i>
-                    <span class="menu-text">
-								Cross-Site Scripting
-							</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[8];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[9];?>" >
+                    <li>
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/reflected_get.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             反射型xss(get)
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
 
 
-                    <li class="<?php echo $ACTIVE[10];?>" >
+                    <li>
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xsspost/post_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             反射型xss(post)
                         </a>
-                        <b class="arrow"></b>
+
                     </li>
 
 
-                    <li class="<?php echo $ACTIVE[11];?>" >
+                    <li >
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_stored.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             存储型xss
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
 
-                    <li class="<?php echo $ACTIVE[12];?>" >
+                    <li>
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_dom.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             DOM型xss
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                    <li class="<?php echo $ACTIVE[12];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_dom_x.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            DOM型xss-x
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[13];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xssblind/xss_blind.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xss之盲打
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[14];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_01.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xss之过滤
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[15];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_02.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xss之htmlspecialchars
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
+          <!--   <li role="separator" class="divider"></li> -->
+          </ul>
+        </li>
+      </ul>
 
 
-                    <li class="<?php echo $ACTIVE[16];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_03.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xss之href输出
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
 
-
-                    <li class="<?php echo $ACTIVE[17];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xss/xss_04.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xss之js输出
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="<?php echo $ACTIVE[25];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-share"></i>
-                    <span class="menu-text">
-								CSRF
-							</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[26];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/csrf/csrf.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[27];?>" >
+ <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSRF<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                    <li >
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/csrf/csrfget/csrf_get_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             CSRF(get)
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                    <li class="<?php echo $ACTIVE[28];?>" >
+                    <li>
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/csrf/csrfpost/csrf_post_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             CSRF(post)
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                    <li class="<?php echo $ACTIVE[29];?>" >
+                    <li >
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/csrf/csrftoken/token_get_login.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             CSRF Token
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                </ul>
-            </li>
-
-
-            <li class="<?php echo $ACTIVE[35];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon fa fa-fighter-jet"></i>
-                    <span class="menu-text">
-								SQL-Inject
-							</span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[36];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[37];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_id.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            数字型注入(post)
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[38];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_str.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            字符型注入(get)
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[39];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_search.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            搜索型注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[40];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_x.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            xx型注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[41];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_iu/sqli_login.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            "insert/update"注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[42];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_del.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            "delete"注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[43];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_header/sqli_header_login.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            "http header"注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[44];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_blind_b.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            盲注(base on boolian)
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[45];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_blind_t.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            盲注(base on time)
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[46];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_widebyte.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            宽字节注入
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-            </ul>
+    
+          </ul>
         </li>
+      </ul>
 
 
-
-        <li class="<?php echo $ACTIVE[50];?>">
-            <a href="#" class="dropdown-toggle">
-                <i class="ace-icon glyphicon glyphicon-pencil"></i>
-                <span class="menu-text">
-                        RCE
-                    </span>
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
-            <b class="arrow"></b>
-            <ul class="submenu">
-
-                <li class="<?php echo $ACTIVE[51];?>" >
-                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/rce/rce.php">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        概述
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="<?php echo $ACTIVE[52];?>" >
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">命令执行<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li >
                     <a href="<?php echo $GHP_ROOT_DIR;?>vul/rce/rce_ping.php">
                         <i class="menu-icon fa fa-caret-right"></i>
                         exec "ping"
                     </a>
-                    <b class="arrow"></b>
                 </li>
 
-                <li class="<?php echo $ACTIVE[53];?>" >
+                <li>
                     <a href="<?php echo $GHP_ROOT_DIR;?>vul/rce/rce_eval.php">
                         <i class="menu-icon fa fa-caret-right"></i>
                         exec "evel"
                     </a>
-                    <b class="arrow"></b>
                 </li>
 
-            </ul>
-        </li>
-
-        <li class="<?php echo $ACTIVE[55];?>">
-            <a href="#" class="dropdown-toggle">
-                <i class="ace-icon glyphicon glyphicon-file"></i>
-                <span class="menu-text">
-                    File Inclusion
-                </span>
-                <b class="arrow fa fa-angle-down"></b>
-            </a>
-            <b class="arrow"></b>
-            <ul class="submenu">
-
-                <li class="<?php echo $ACTIVE[56];?>" >
-                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/fileinclude/fileinclude.php">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        概述
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="<?php echo $ACTIVE[57];?>" >
-                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/fileinclude/fi_local.php">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        File Inclusion(local)
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-
-                <li class="<?php echo $ACTIVE[58];?>" >
-                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/fileinclude/fi_remote.php"">
-                        <i class="menu-icon fa fa-caret-right"></i>
-                        File Inclusion(remote)
-                    </a>
-                    <b class="arrow"></b>
-                </li>
-
-            </ul>
-        </li>
-
-
-        <li class="<?php echo $ACTIVE[60];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-download"></i>
-                    <span class="menu-text">
-                Unsafe Filedownload
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[61];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafedownload/unsafedownload.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[62];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafedownload/down_nba.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Unsafe Filedownload
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="<?php echo $ACTIVE[65];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-upload"></i>
-                    <span class="menu-text">
-                Unsafe Fileupload
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[66];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/upload.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[67];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/clientcheck.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            client check
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[68];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/servercheck.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            MIME type
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[69];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/getimagesize.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            getimagesize
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li class="<?php echo $ACTIVE[73];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-text-height"></i>
-                    <span class="menu-text">
-                Over Permission
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[74];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/overpermission/op.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[75];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/overpermission/op1/op1_login.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            水平越权
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[76];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/overpermission/op2/op2_login.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            垂直越权
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
-            </li>
-
-
-            <li class="<?php echo $ACTIVE[80];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-align-left"></i>
-                    <span class="menu-text">
-                ../../
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[81];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/dir/dir.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[82];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/dir/dir_list.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            目录遍历
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li class="<?php echo $ACTIVE[85];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-camera"></i>
-                    <span class="menu-text">
-                敏感信息泄露
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[86];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/infoleak/infoleak.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                    <li class="<?php echo $ACTIVE[87];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/infoleak/findabc.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            IcanseeyourABC
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-                </ul>
-            </li>
-
-            <li class="<?php echo $ACTIVE[90];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-align-left"></i>
-                    <span class="menu-text">
-                        PHP反序列化
-                    </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[91];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/unserilization/unserilization.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[92];?>" >
+                <li class="<?php echo $ACTIVE[92];?>" >
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/unserilization/unser.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             PHP反序列化漏洞
                         </a>
                         <b class="arrow"></b>
-                    </li>
+                </li>
+          <!--   <li role="separator" class="divider"></li> -->
+          </ul>
+        </li>
+      </ul>
 
-                </ul>
-            </li>
 
 
-            <li class="<?php echo $ACTIVE[95];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-flag"></i>
-                    <span class="menu-text">
-                XXE
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[96];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/xxe/xxe.php">
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">注入<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_id.php">
                             <i class="menu-icon fa fa-caret-right"></i>
-                            概述
+                            数字型注入(post)
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                    <li class="<?php echo $ACTIVE[97];?>" >
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_str.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            字符型注入(get)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_search.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            搜索型注入
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_x.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            xx型注入
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_iu/sqli_login.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            "insert/update"注入
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_del.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            "delete"注入
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_header/sqli_header_login.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            "http header"注入
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_blind_b.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            盲注(base on boolian)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_blind_t.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            盲注(base on time)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/sqli/sqli_widebyte.php">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            宽字节注入
+                        </a>
+                    </li>
+                    <li>
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/xxe/xxe_1.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             XXE漏洞
                         </a>
-                        <b class="arrow"></b>
                     </li>
 
-                </ul>
+          </ul>
+        </li>
+      </ul>
+
+
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">文件包含<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li>
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/fileinclude/fi_local.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        LFI
+                    </a>
+                </li>
+
+                <li>
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/fileinclude/fi_remote.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                       RFL
+                    </a>
+                </li>
+
+          <!--   <li role="separator" class="divider"></li> -->
+          </ul>
+        </li>
+      </ul>
+
+
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">上传漏洞<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+            <li>
+                <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/clientcheck.php">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    upload bypass 1
+                </a>
             </li>
 
-            <li class="<?php echo $ACTIVE[100];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-repeat"></i>
-                    <span class="menu-text">
-                URL重定向
-            </span>
-                    <b class="arrow fa fa-angle-down"></b>
+            <li>
+                <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/servercheck.php">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    upload bypass 2
                 </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
-
-                    <li class="<?php echo $ACTIVE[101];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/urlredirect/unsafere.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="<?php echo $ACTIVE[102];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/urlredirect/urlredirect.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            不安全的URL跳转
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-                </ul>
             </li>
 
-            <li class="<?php echo $ACTIVE[105];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon fa fa-exchange"></i>
-                    <span class="menu-text">
-                SSRF
-                    </span>
-                    <b class="arrow fa fa-angle-down"></b>
+            <li>
+                <a href="<?php echo $GHP_ROOT_DIR;?>vul/unsafeupload/getimagesize.php">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    upload bypass 3
                 </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
+            </li>
+          </ul>
+        </li>
+      </ul>
 
-                    <li class="<?php echo $ACTIVE[106];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>vul/ssrf/ssrf.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            概述
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">逻辑缺陷<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li >
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/overpermission/op1/op1_login.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        水平越权
+                    </a>
+                </li>
 
-                    <li class="<?php echo $ACTIVE[107];?>" >
+                <li>
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/overpermission/op2/op2_login.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        垂直越权
+                    </a>
+                </li>
+
+            <li>
+                 <a href="<?php echo $GHP_ROOT_DIR;?>vul/burteforce/bruteforce.php">
+                 <i class="menu-icon fa fa-caret-right"></i>
+                    暴力破解
+                 </a>
+             </li>
+          </ul>
+        </li>
+      </ul>
+
+
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">目录遍历<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li >
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/dir/dir_list.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        目录遍历
+                    </a>
+                </li>
+          </ul>
+        </li>
+      </ul>
+
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">URL重定向<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li class="<?php echo $ACTIVE[102];?>" >
+                    <a href="<?php echo $GHP_ROOT_DIR;?>vul/urlredirect/urlredirect.php">
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        不安全的URL跳转
+                    </a>
+                    <b class="arrow"></b>
+                </li>
+          </ul>
+        </li>
+      </ul>
+
+     <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SSRF<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+                <li class="<?php echo $ACTIVE[107];?>" >
                         <a href="<?php echo $GHP_ROOT_DIR;?>vul/ssrf/ssrf_curl.php">
                             <i class="menu-icon fa fa-caret-right"></i>
                             SSRF(curl)
@@ -837,42 +410,20 @@ if (!isset($ACTIVE)){
                         </a>
                         <b class="arrow"></b>
                     </li>
-
-                </ul>
-            </li>
-
-
+          </ul>
+        </li>
+      </ul>
 
 
-            <li class="<?php echo $ACTIVE[120];?>">
-                <a href="#" class="dropdown-toggle">
-                    <i class="ace-icon glyphicon glyphicon-cog"></i>
-                    <span class="menu-text">
-                管理工具
-                    </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-                <b class="arrow"></b>
-                <ul class="submenu">
+<!--       <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">user</a></li>
+      </ul> -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-                    <li class="<?php echo $ACTIVE[121];?>" >
-                        <a href="<?php echo $GHP_ROOT_DIR;?>pkxss/index.php">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            XSS后台
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-
-
-
-                </ul>
-            </li>
-
-
-        </ul><!-- /.nav-list -->
-
-        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-        </div>
-    </div>
-
+<div class="main-container ace-save-state" id="main-container">
+<!--     <script type="text/javascript">
+        try{ace.settings.loadState('main-container')}catch(e){}
+    </script> -->
+</div>

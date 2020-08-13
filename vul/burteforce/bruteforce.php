@@ -8,7 +8,7 @@ include_once $GHP_ROOT_DIR.'inc/config.inc.php';
 include_once $GHP_ROOT_DIR.'inc/mysql.inc.php';
 
 $SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
-if ($SELF_PAGE = "bf_form.php"){
+if ($SELF_PAGE = "bruteforce.php"){
     $ACTIVE = array('','active open','','active',"","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","");
 
 }
@@ -55,44 +55,33 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){
             <ul class="breadcrumb">
                 <li>
                     <i class="ace-icon fa fa-home home-icon"></i>
-                    <a href="burteforce.php">暴力破解</a>
+                    <a href="burteforce.php">逻辑缺陷</a>
                 </li>
-                <li class="active">基于表单的暴力破解</li>
+                <li class="active">暴力破解</li>
 
             </ul><!-- /.breadcrumb -->
-            <a href="#" style="float:right" data-container="body" data-toggle="popover" data-placement="bottom" title="tips(再点一下关闭)"
-               data-content="这里一共有三个用户：
-                admin/123456
-                pikachu/000000
-                test/abc123">
-                点一下提示~
-            </a>
 
         </div>
 <div class="page-content">
 
 
-<div class="bf_form">
-    <div class="bf_form_main">
-        <h4 class="header blue lighter bigger">
-            <i class="ace-icon fa fa-coffee green"></i>
-            Please Enter Your Information
-        </h4>
+<div class="bruteforce">
+    <div class="bruteforce_main">
 
-        <form method="post" action="bf_form.php">
+        <form method="post" action="bruteforce.php">
 <!--            <fieldset>-->
                 <label>
 														<span>
+                                                            user：
 															<input type="text" name="username" placeholder="Username" />
-															<i class="ace-icon fa fa-user"></i>
 														</span>
                 </label>
                 </br>
 
                 <label>
 														<span>
+                                                            pass：
 															<input type="password" name="password" placeholder="Password" />
-															<i class="ace-icon fa fa-lock"></i>
 														</span>
                 </label>
 
@@ -100,11 +89,7 @@ if(isset($_POST['submit']) && $_POST['username'] && $_POST['password']){
                 <div class="space"></div>
 
                 <div class="clearfix">
-                    <label><input class="submit" name="submit" type="submit" value="Login" /></label>
-<!--                    <button type="button" name="submit">-->
-<!--                        <i class="ace-icon fa fa-key"></i>-->
-<!--                        <span class="bigger-110">Login</span>-->
-<!--                    </button>-->
+                    <input class="submit" name="submit" type="submit" value="登录" />
                 </div>
 
         </form>
