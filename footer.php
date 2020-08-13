@@ -1,10 +1,10 @@
 <?php
 
 
-if (!isset($PIKA_ROOT_DIR)){
-    $PIKA_ROOT_DIR = '';
+if (!isset($GHP_ROOT_DIR)){
+    $GHP_ROOT_DIR = '';
 }
-//echo $PIKA_ROOT_DIR;
+//echo $GHP_ROOT_DIR;
 
 ?>
 
@@ -33,28 +33,28 @@ if (!isset($PIKA_ROOT_DIR)){
 <!-- <![endif]-->
 
 <!--[if IE]>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery-1.11.3.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery-1.11.3.min.js"></script>
 <![endif]-->
 <script type="text/javascript">
-    if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    if('ontouchstart' in document.documentElement) document.write("<script src='<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 
 <!-- page specific plugin scripts -->
 
 <!--[if lte IE 8]>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/excanvas.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/excanvas.min.js"></script>
 <![endif]-->
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery-ui.custom.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.ui.touch-punch.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.easypiechart.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.sparkline.index.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.flot.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.flot.pie.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/jquery.flot.resize.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery-ui.custom.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.easypiechart.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.sparkline.index.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.flot.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.flot.pie.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/jquery.flot.resize.min.js"></script>
 
 <!-- ace scripts -->
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/ace-elements.min.js"></script>
-<script src="<?php echo $PIKA_ROOT_DIR;?>assets/js/ace.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/ace-elements.min.js"></script>
+<script src="<?php echo $GHP_ROOT_DIR;?>assets/js/ace.min.js"></script>
 
 <!-- inline scripts related to this page -->
 

@@ -1,11 +1,11 @@
 <?php
 
 
-$PIKA_ROOT_DIR =  "../../../";
+$GHP_ROOT_DIR =  "../../../";
 
-include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
-include_once $PIKA_ROOT_DIR.'inc/mysql.inc.php';
-include_once $PIKA_ROOT_DIR.'inc/function.php';
+include_once $GHP_ROOT_DIR.'inc/config.inc.php';
+include_once $GHP_ROOT_DIR.'inc/mysql.inc.php';
+include_once $GHP_ROOT_DIR.'inc/function.php';
 
 
 $SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
@@ -13,7 +13,7 @@ if ($SELF_PAGE = "admin.php"){
     $ACTIVE = array('','','','','','','','active open','','','','','','active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 
 }
-include_once $PIKA_ROOT_DIR.'header.php';
+include_once $GHP_ROOT_DIR.'header.php';
 
 
 $link=connect();
@@ -100,7 +100,7 @@ A;
 
 
 <?php
-include_once $PIKA_ROOT_DIR.'footer.php';
+include_once $GHP_ROOT_DIR.'footer.php';
 
 
 ?>

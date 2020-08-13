@@ -8,8 +8,8 @@ if ($SELF_PAGE = "sqli.php"){
     $ACTIVE = array('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','active open','active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',);
 }
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR . 'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR . 'header.php';
 
 
 
@@ -71,6 +71,6 @@ include_once $PIKA_ROOT_DIR . 'header.php';
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

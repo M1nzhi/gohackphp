@@ -8,13 +8,13 @@ if ($SELF_PAGE = "reflected_get.php"){
 
 }
 
-$PIKA_ROOT_DIR =  "../../../";
+$GHP_ROOT_DIR =  "../../../";
 
-include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
-include_once $PIKA_ROOT_DIR.'inc/mysql.inc.php';
-include_once $PIKA_ROOT_DIR.'inc/function.php';
+include_once $GHP_ROOT_DIR.'inc/config.inc.php';
+include_once $GHP_ROOT_DIR.'inc/mysql.inc.php';
+include_once $GHP_ROOT_DIR.'inc/function.php';
 
-include_once $PIKA_ROOT_DIR.'header.php';
+include_once $GHP_ROOT_DIR.'header.php';
 
 
 
@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 
         //下面直接将前端输入的参数原封不动的输出了,出现xss
         if($_POST['message']=='kobe'){
-            $html.="<p class='notice'>愿你和{$_POST['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
+            $html.="<p class='notice'>愿你和{$_POST['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$GHP_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
         }else{
             $html.="<p class='notice'>who is {$_POST['message']},i don't care!</p>";
         }
@@ -102,6 +102,6 @@ if(isset($_GET['logout']) && $_GET['logout'] == '1'){
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

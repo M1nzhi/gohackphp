@@ -8,8 +8,8 @@ if ($SELF_PAGE = "xss_02.php"){
 
 }
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR.'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR.'header.php';
 
 $html='';
 $html1='';
@@ -72,6 +72,6 @@ if(isset($_GET['submit'])){
 
 
 <?php
-include_once $PIKA_ROOT_DIR.'footer.php';
+include_once $GHP_ROOT_DIR.'footer.php';
 
 ?>

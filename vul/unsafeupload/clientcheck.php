@@ -6,9 +6,9 @@ $SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
 if ($SELF_PAGE = "clientcheck.php"){
     $ACTIVE = array('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','active open','','active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 }
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR . 'header.php';
-include_once $PIKA_ROOT_DIR.'inc/uploadfunction.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR . 'header.php';
+include_once $GHP_ROOT_DIR.'inc/uploadfunction.php';
 
 $html='';
 if(isset($_POST['submit'])){
@@ -92,6 +92,6 @@ if(isset($_POST['submit'])){
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

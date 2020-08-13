@@ -8,8 +8,8 @@ if ($SELF_PAGE = "reflected_get.php"){
 
 }
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR.'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR.'header.php';
 
 
 $html='';
@@ -18,7 +18,7 @@ if(isset($_GET['submit'])){
         $html.="<p class='notice'>输入'kobe'试试-_-</p>";
     }else{
         if($_GET['message']=='kobe'){
-            $html.="<p class='notice'>愿你和{$_GET['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
+            $html.="<p class='notice'>愿你和{$_GET['message']}一样，永远年轻，永远热血沸腾！</p><img src='{$GHP_ROOT_DIR}assets/images/nbaplayer/kobe.png' />";
         }else{
             $html.="<p class='notice'>who is {$_GET['message']},i don't care!</p>";
         }
@@ -69,6 +69,6 @@ if(isset($_GET['submit'])){
 
 
 <?php
-include_once $PIKA_ROOT_DIR.'footer.php';
+include_once $GHP_ROOT_DIR.'footer.php';
 
 ?>

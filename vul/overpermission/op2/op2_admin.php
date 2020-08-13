@@ -7,11 +7,11 @@ $SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
 if ($SELF_PAGE = "op2_admin.php"){
     $ACTIVE = array('','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','active open','','','active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 }
-$PIKA_ROOT_DIR =  "../../../";
-include_once $PIKA_ROOT_DIR . 'header.php';
-include_once $PIKA_ROOT_DIR.'inc/mysql.inc.php';
-include_once $PIKA_ROOT_DIR.'inc/function.php';
-include_once $PIKA_ROOT_DIR.'inc/config.inc.php';
+$GHP_ROOT_DIR =  "../../../";
+include_once $GHP_ROOT_DIR . 'header.php';
+include_once $GHP_ROOT_DIR.'inc/mysql.inc.php';
+include_once $GHP_ROOT_DIR.'inc/function.php';
+include_once $GHP_ROOT_DIR.'inc/config.inc.php';
 
 
 $link=connect();
@@ -123,6 +123,6 @@ A;
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

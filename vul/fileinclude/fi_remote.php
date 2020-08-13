@@ -8,8 +8,8 @@ if ($SELF_PAGE = "fi_remote.php"){
         'active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 }
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR . 'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR . 'header.php';
 
 
 $html1='';
@@ -88,6 +88,6 @@ if(isset($_GET['submit']) && $_GET['filename']!=null){
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

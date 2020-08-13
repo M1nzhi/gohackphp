@@ -11,8 +11,8 @@ $FILEDIR = $_SERVER['PHP_SELF'];
 $RD = explode('/',$FILEDIR)[1];
 
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR.'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR.'header.php';
 
 
 //payload:
@@ -65,6 +65,6 @@ if(isset($_GET['url']) && $_GET['url'] != null){
 
 
 <?php
-include_once $PIKA_ROOT_DIR . 'footer.php';
+include_once $GHP_ROOT_DIR . 'footer.php';
 
 ?>

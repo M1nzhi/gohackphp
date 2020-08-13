@@ -1,9 +1,9 @@
 <?php
 
 
-$PIKA_ROOT_DIR =  "../../";
+$GHP_ROOT_DIR =  "../../";
 
-include_once $PIKA_ROOT_DIR."inc/function.php";
+include_once $GHP_ROOT_DIR."inc/function.php";
 
 header("Content-type:text/html;charset=utf-8");
 // $file_name="cookie.jpg";

@@ -7,11 +7,11 @@ if ($SELF_PAGE = "xss_stored.php"){
     $ACTIVE = array('','','','','','','','active open','','','','active','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
 }
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR.'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR.'header.php';
 
-include_once $PIKA_ROOT_DIR."inc/config.inc.php";
-include_once $PIKA_ROOT_DIR."inc/mysql.inc.php";
+include_once $GHP_ROOT_DIR."inc/config.inc.php";
+include_once $GHP_ROOT_DIR."inc/mysql.inc.php";
 
 
 $link=connect();
@@ -98,5 +98,5 @@ if(array_key_exists('id', $_GET) && is_numeric($_GET['id'])){
 
 
 <?php
-include_once $PIKA_ROOT_DIR.'footer.php';
+include_once $GHP_ROOT_DIR.'footer.php';
 ?>

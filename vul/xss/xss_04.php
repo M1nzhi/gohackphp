@@ -9,8 +9,8 @@ if ($SELF_PAGE = "xss_04.php"){
 
 
 
-$PIKA_ROOT_DIR =  "../../";
-include_once $PIKA_ROOT_DIR.'header.php';
+$GHP_ROOT_DIR =  "../../";
+include_once $GHP_ROOT_DIR.'header.php';
 
 
 $jsvar='';
@@ -29,7 +29,7 @@ if(isset($_GET['submit']) && $_GET['message'] !=null){
     $jsvar=$_GET['message'];
 //    $jsvar=htmlspecialchars($_GET['message'],ENT_QUOTES);
     if($jsvar == 'tmac'){
-        $html.="<img src='{$PIKA_ROOT_DIR}assets/images/nbaplayer/tmac.jpeg' />";
+        $html.="<img src='{$GHP_ROOT_DIR}assets/images/nbaplayer/tmac.jpeg' />";
     }
 }
 
@@ -90,6 +90,6 @@ if(isset($_GET['submit']) && $_GET['message'] !=null){
 
 
 <?php
-include_once $PIKA_ROOT_DIR.'footer.php';
+include_once $GHP_ROOT_DIR.'footer.php';
 
 ?>
