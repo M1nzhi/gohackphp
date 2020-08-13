@@ -1,8 +1,5 @@
 <?php
-/**
- * Created by runner.han
- * There is nothing new under the sun
- */
+
 include_once 'header.php';
 include_once 'inc/config.inc.php';
 $dbhost=DBHOST;

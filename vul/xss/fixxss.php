@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hanlu220
- * Date: 2019/5/29
- * Time: 13:26
- */
-
 
 /**
 1.元素内容:能解释标签和字符实体

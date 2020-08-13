@@ -1,8 +1,5 @@
 <?php
-///**
-// * Created by runner.han
-// * There is nothing new under the sun
-// */
+
 
 if (!isset($PIKA_ROOT_DIR)){
     $PIKA_ROOT_DIR = '';

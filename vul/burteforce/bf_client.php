@@ -1,8 +1,5 @@
 <?php
-/**
- * Created by runner.han
- * There is nothing new under the sun
- */
+
 
 $PIKA_ROOT_DIR =  "../../";
 include_once $PIKA_ROOT_DIR.'inc/config.inc.php';

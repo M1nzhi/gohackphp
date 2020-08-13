@@ -1,8 +1,5 @@
 <?php
-/**
- * Created by runner.han
- * There is nothing new under the sun
- */
+
 
 
 $SELF_PAGE = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],'/')+1);
